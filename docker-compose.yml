@@ -20,8 +20,8 @@ services:
         volumes:
         - /nginx/logs:/opt/log
         networks:
-        - nginxproxymanager_default
+        - ngnix_default
 networks:
-  nginxproxymanager_default:
+  ngnix_default:
     external: true
 
