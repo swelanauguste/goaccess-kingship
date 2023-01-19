@@ -18,7 +18,7 @@ services:
             - EXCLUDE_IPS=127.0.0.1 #optional - comma delimited 
             - LOG_TYPE=NPM #optional - more information below
         volumes:
-        - /nginx/logs:/opt/log
+        - /root/ngnix/data/logs:/opt/log
         networks:
         - ngnix_default
 networks:
