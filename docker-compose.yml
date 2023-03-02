@@ -11,17 +11,17 @@ services:
             - PGID=1000
             - TZ=America/St_Lucia         
             - SKIP_ARCHIVED_LOGS=False #optional
-            - DEBUG=False #optional
+            - DEBUG=True #optional
             - BASIC_AUTH=False #optional
             - BASIC_AUTH_USERNAME=user #optional
             - BASIC_AUTH_PASSWORD=pass #optional   
-            - EXCLUDE_IPS=127.0.0.1 #optional - comma delimited 
+            - EXCLUDE_IPS=127.0.0.1,10.10.10.100 #optional - comma delimited 
             - LOG_TYPE=NPM #optional - more information below
         volumes:
-        - /root/ngnix/data/logs:/opt/log
+            - ~/kingship-nginx-proxy-manager/data/logs:/opt/log
         networks:
-        - ngnix_default
+          - kingship-nginx-proxy-manager_default
 networks:
-  ngnix_default:
+  kingship-nginx-proxy-manager_default:
     external: true
 
